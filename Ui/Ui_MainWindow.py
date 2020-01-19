@@ -1,0 +1,95 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'Ui_MainWindow.ui'
+#
+# Created by: PyQt5 UI code generator 5.14.0
+#
+# WARNING! All changes made in this file will be lost!
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(1139, 941)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.horizontalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(50, 210, 701, 671))
+        self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.left_widget = QtWidgets.QWidget(self.horizontalLayoutWidget)
+        self.left_widget.setEnabled(True)
+        self.left_widget.setObjectName("left_widget")
+        self.horizontalLayout.addWidget(self.left_widget)
+        self.mid_widget = QtWidgets.QWidget(self.horizontalLayoutWidget)
+        self.mid_widget.setObjectName("mid_widget")
+        self.horizontalLayout.addWidget(self.mid_widget)
+        self.right_widget = QtWidgets.QWidget(self.horizontalLayoutWidget)
+        self.right_widget.setObjectName("right_widget")
+        self.horizontalLayout.addWidget(self.right_widget)
+        self.right_widget.raise_()
+        self.mid_widget.raise_()
+        self.left_widget.raise_()
+        self.log_listWidget = QtWidgets.QListWidget(self.centralwidget)
+        self.log_listWidget.setGeometry(QtCore.QRect(790, 250, 321, 511))
+        self.log_listWidget.setObjectName("log_listWidget")
+        self.log_label = QtWidgets.QLabel(self.centralwidget)
+        self.log_label.setGeometry(QtCore.QRect(790, 200, 111, 41))
+        font = QtGui.QFont()
+        font.setFamily("Agency FB")
+        font.setPointSize(14)
+        self.log_label.setFont(font)
+        self.log_label.setObjectName("log_label")
+        self.log_clear_btn = QtWidgets.QPushButton(self.centralwidget)
+        self.log_clear_btn.setGeometry(QtCore.QRect(1020, 200, 91, 41))
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(10)
+        self.log_clear_btn.setFont(font)
+        self.log_clear_btn.setObjectName("log_clear_btn")
+        self.pull_btn = QtWidgets.QPushButton(self.centralwidget)
+        self.pull_btn.setGeometry(QtCore.QRect(790, 780, 321, 121))
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(36)
+        font.setBold(False)
+        font.setWeight(50)
+        self.pull_btn.setFont(font)
+        self.pull_btn.setObjectName("pull_btn")
+        self.prize_label = QtWidgets.QLabel(self.centralwidget)
+        self.prize_label.setGeometry(QtCore.QRect(60, 50, 241, 121))
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(48)
+        self.prize_label.setFont(font)
+        self.prize_label.setObjectName("prize_label")
+        self.prize_num_label = QtWidgets.QLabel(self.centralwidget)
+        self.prize_num_label.setGeometry(QtCore.QRect(300, 50, 841, 121))
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(48)
+        self.prize_num_label.setFont(font)
+        self.prize_num_label.setObjectName("prize_num_label")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1139, 25))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+
+        self.retranslateUi(MainWindow)
+        self.log_clear_btn.clicked.connect(self.log_listWidget.clear)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.log_label.setText(_translate("MainWindow", "訊息"))
+        self.log_clear_btn.setText(_translate("MainWindow", "clear"))
+        self.pull_btn.setText(_translate("MainWindow", "PULL"))
+        self.prize_label.setText(_translate("MainWindow", "獎金："))
+        self.prize_num_label.setText(_translate("MainWindow", "0"))

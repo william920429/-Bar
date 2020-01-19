@@ -2,7 +2,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import math, random
 
 class _stars():
-	def __init__(self, mainWindow, num):
+	def __init__(self, mainWindow, total, pic):
 		self.mainWindow = mainWindow
 		self.ui = mainWindow.ui
 		self.stars = set()
@@ -11,7 +11,7 @@ class _stars():
 		self.timer = QtCore.QTimer()
 		self.timer.timeout.connect(self.update)
 
-		self.pic_init(num)
+		self.pic_init(total, pic)
 		pass
 
 	def boom(self):
@@ -57,8 +57,8 @@ class _stars():
 			self.timer.stop()
 			self.stars, self.stars_not_using = self.stars_not_using, self.stars
 	
-	def pic_init(self, total):
-		img = QtGui.QPixmap("pic/meow.png").scaledToWidth(100)
+	def pic_init(self, total, pic):
+		img = QtGui.QPixmap(pic).scaledToWidth(100)
 		s = img.size()
 		w = s.width()
 		h = s.height()

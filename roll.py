@@ -93,13 +93,13 @@ class _roll():
 							label.hide()
 						else:
 							label.show()
-					print("finished:", i, j)
+					# print("finished:", i, j)
 					break
 				else:
 					self.image[i][j].setGeometry(x, y, w, h)
 			
 		if self.finish[0] != -1 and self.finish[1] != -1 and self.finish[2] != -1:
-			print("finished3:", i)
+			# print("finished3:", i)
 			self.speed_control()
 		# if reach and self.accleration[0] < 0:
 		
@@ -108,14 +108,14 @@ class _roll():
 	def led(self):
 		for i in range(len(self.led_top)):
 			num = random.randint(0, len(self.led_top[i]) - 1)
-			print(num)
+			# print(num)
 			for j in range(len(self.led_top[i])):
 				if j == num:
 					self.led_top[i][j].show()
 				else:
 					self.led_top[i][j].hide()
 			num = random.randint(0, len(self.led_bot[i]) - 1)
-			print(num)
+			# print(num)
 			for j in range(len(self.led_bot[i])):
 				if j == num:
 					self.led_bot[i][j].show()
@@ -164,7 +164,7 @@ class _roll():
 			for j in range(len(widgets)):
 				label = QtWidgets.QLabel(widgets[j])
 				label.setPixmap(pixmap[i])
-				label.setGeometry(0, i*height, width, height)
+				label.setGeometry(0, -107, width, height)
 				label.hide()
 				self.led_top[j].append(label)
 
@@ -181,7 +181,7 @@ class _roll():
 			for j in range(len(widgets)):
 				label = QtWidgets.QLabel(widgets[j])
 				label.setPixmap(pixmap[i])
-				label.setGeometry(0, i*height, width, height)
+				label.setGeometry(0, 108, width, height)
 				label.show()
 				self.led_bot[j].append(label)
 		

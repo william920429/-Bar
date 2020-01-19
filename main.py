@@ -23,7 +23,7 @@ class MainWindow(QtWidgets.QMainWindow):
 		self.default_prize = 100
 		self.ui.prize_num_label.setText(str(self.default_prize))
 		
-		self.stars = _stars(self, 200)
+		self.stars = _stars(self, 200, "pic/meow.png")
 		self.roll = _roll(self)
 
 		self.ui.log_clear_btn.hide()

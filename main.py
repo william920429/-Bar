@@ -12,17 +12,18 @@ class MainWindow(QtWidgets.QMainWindow):
 		self.ui.setupUi(self)
 		self.app = app
 
-		playlist = QMediaPlaylist()
-		playlist.addMedia(QMediaContent(QtCore.QUrl.fromLocalFile("mp3/NyanCat.mp3")))
-		playlist.setPlaybackMode(QMediaPlaylist.Loop)
+		self.debug = False
+		self.cat_mp3_playlist = QMediaPlaylist()
+		self.cat_mp3_playlist.addMedia(QMediaContent(QtCore.QUrl.fromLocalFile("mp3/NyanCat.mp3")))
+		self.cat_mp3_playlist.setPlaybackMode(QMediaPlaylist.Loop)
 		self.cat_mp3 = QMediaPlayer()
-		self.cat_mp3.setPlaylist(playlist)
+		self.cat_mp3.setPlaylist(self.cat_mp3_playlist)
 		# self.cat_mp3.setMedia(QMediaContent(QtCore.QUrl.fromLocalFile("mp3/NyanCat.mp3")))
 		self.cat_mp3.setVolume(100)
 		self.cat_mp3.play()
 
 		self.meow_mp3 = QMediaPlayer()
-		self.meow_mp3.setMedia(QMediaContent(QtCore.QUrl.fromLocalFile("mp3/NyanCat.mp3")))
+		self.meow_mp3.setMedia(QMediaContent(QtCore.QUrl.fromLocalFile("mp3/meow.m4a")))
 		self.meow_mp3.setVolume(100)
 		# self.meow_mp3.play()
 

@@ -62,11 +62,12 @@ class _roll():
 				self.mainWindow.log.addItem("恭喜您抽中了{}".format(s))
 				self.mainWindow.prize(win = True)
 				self.mainWindow.stars.boom()
-				self.mainWindow.meow_mp3.play()
+				# self.mainWindow.meow_mp3.play()
 			else:
 				self.mainWindow.log.addItem("您抽中了{}".format(s))
-				# self.mainWindow.stars.boom()################
-				# self.mainWindow.meow_mp3.play()
+				if self.mainWindow.debug:
+					self.mainWindow.stars.boom()
+					self.mainWindow.meow_mp3.play()
 		pass
 
 	def roll(self):

@@ -64,7 +64,7 @@ class Ui_MainWindow(object):
         self.prize_label = QtWidgets.QLabel(self.centralwidget)
         self.prize_label.setGeometry(QtCore.QRect(60, 50, 241, 121))
         font = QtGui.QFont()
-        font.setFamily("Consolas")
+        font.setFamily("Microsoft JhengHei")
         font.setPointSize(48)
         self.prize_label.setFont(font)
         self.prize_label.setObjectName("prize_label")

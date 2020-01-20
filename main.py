@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent
+from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent, QMediaPlaylist
 from Ui.Ui_MainWindow import *
 from stars import _stars
 from roll import _roll###################
@@ -12,10 +12,19 @@ class MainWindow(QtWidgets.QMainWindow):
 		self.ui.setupUi(self)
 		self.app = app
 
+		playlist = QMediaPlaylist()
+		playlist.addMedia(QMediaContent(QtCore.QUrl.fromLocalFile("mp3/NyanCat.mp3")))
+		playlist.setPlaybackMode(QMediaPlaylist.Loop)
 		self.cat_mp3 = QMediaPlayer()
-		self.cat_mp3.setMedia(QMediaContent(QtCore.QUrl.fromLocalFile("mp3/NyanCat.mp3")))
+		self.cat_mp3.setPlaylist(playlist)
+		# self.cat_mp3.setMedia(QMediaContent(QtCore.QUrl.fromLocalFile("mp3/NyanCat.mp3")))
 		self.cat_mp3.setVolume(100)
 		self.cat_mp3.play()
+
+		self.meow_mp3 = QMediaPlayer()
+		self.meow_mp3.setMedia(QMediaContent(QtCore.QUrl.fromLocalFile("mp3/NyanCat.mp3")))
+		self.meow_mp3.setVolume(100)
+		# self.meow_mp3.play()
 
 		self.FPS = 60
 		self.log = self.ui.log_listWidget
@@ -54,10 +63,10 @@ class MainWindow(QtWidgets.QMainWindow):
 				return True
 		return super().eventFilter(obj, event)
 
-	def keyPressEvent(self, keyEvent):
-		self.event_handle()
-		# print(keyEvent)
-		pass
+	# def keyPressEvent(self, keyEvent):
+	# 	self.event_handle()
+	# 	# print(keyEvent)
+	# 	pass
 
 	def event_handle(self):
 		#sender = self.sender()

@@ -2,7 +2,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent
 from Ui.Ui_MainWindow import *
 from stars import _stars
-from roll import _roll
+from roll import _roll###################
 import os, sys, random, math
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -12,10 +12,10 @@ class MainWindow(QtWidgets.QMainWindow):
 		self.ui.setupUi(self)
 		self.app = app
 
-		# self.cat_mp3 = QMediaPlayer()
-		# self.cat_mp3.setMedia(QMediaContent(QtCore.QUrl.fromLocalFile("mp3/NyanCat.mp3")))
-		# self.cat_mp3.setVolume(100)
-		# self.cat_mp3.play()
+		self.cat_mp3 = QMediaPlayer()
+		self.cat_mp3.setMedia(QMediaContent(QtCore.QUrl.fromLocalFile("mp3/NyanCat.mp3")))
+		self.cat_mp3.setVolume(100)
+		self.cat_mp3.play()
 
 		self.FPS = 60
 		self.log = self.ui.log_listWidget

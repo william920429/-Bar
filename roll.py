@@ -64,7 +64,7 @@ class _roll():
 				self.mainWindow.stars.boom()
 			else:
 				self.mainWindow.log.addItem("您抽中了{}".format(s))
-				# self.mainWindow.stars.boom()
+				self.mainWindow.stars.boom()################
 		pass
 
 	def roll(self):

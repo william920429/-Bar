@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from PyQt5 import QtCore, QtGui, QtWidgets
 import math
 import random

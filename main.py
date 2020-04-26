@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent, QMediaPlaylist
 from Ui.Ui_MainWindow import *
